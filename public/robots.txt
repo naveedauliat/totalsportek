@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block access to sensitive areas
+Disallow: /admin/
+Disallow: /api/
+
+# Allow access to sitemap
+Sitemap: https://totalsportek-blogs.vercel.app/sitemap.xml
