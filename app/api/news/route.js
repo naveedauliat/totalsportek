@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 export async function GET() {
   try {
     // Using NewsAPI for sports news (you'll need to sign up for a free API key)
-    const NEWS_API_KEY = process.env.NEWS_API_KEY || 'demo'; // Replace with actual API key
+    const NEWS_API_KEY = process.env.NEWS_API_KEY || '00c65c25526141da8a6e25c7de41f084'; // Replace with actual API key
     const response = await axios.get(`https://newsapi.org/v2/everything?q=sports&apiKey=${NEWS_API_KEY}&pageSize=10&sortBy=publishedAt`);
 
     const news = response.data.articles.map(article => ({

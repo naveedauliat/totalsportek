@@ -19,3 +19,8 @@
 - [x] Test API integrations and data fetching.
 - [x] Verify auto-update functionality with ISR.
 - [x] Check responsiveness and UI for new sections.
+
+## 6. Image Updates
+- [x] Replace static sports-hero.jpg with dynamic featured-post images in sports page news cards.
+- [x] Replace static sports-hero.jpg with dynamic featured-post images in LatestNews component.
+- [x] Download placeholder images for featured-post-1.jpg, featured-post-2.jpg, featured-post-3.jpg.

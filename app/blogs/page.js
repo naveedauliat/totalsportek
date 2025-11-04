@@ -444,23 +444,30 @@ In conclusion, Totalsportek's innovation roadmap is inspiring. Their vision for 
         
         <div className="grid md:grid-cols-2 gap-8">
           {blogs.map(blog => (
-            <article 
-              key={blog.id} 
-              className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition"
+            <article
+              key={blog.id}
+              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition"
             >
-              <div className="flex items-center gap-4 mb-3">
-                <span className="text-sm font-semibold text-blue-600">
-                  {blog.category}
-                </span>
-                <span className="text-sm text-gray-500">{blog.date}</span>
+              <img
+                src={`/featured-post-${blog.id % 3 + 1}.jpg`}
+                alt={blog.title}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <div className="flex items-center gap-4 mb-3">
+                  <span className="text-sm font-semibold text-blue-600">
+                    {blog.category}
+                  </span>
+                  <span className="text-sm text-gray-500">{blog.date}</span>
+                </div>
+                <h2 className="text-2xl font-bold text-gray-900 mb-3 leading-tight">
+                  {blog.title}
+                </h2>
+                <p className="text-gray-600 mb-4 leading-relaxed">{blog.excerpt}</p>
+                <button className="text-blue-600 font-semibold hover:underline">
+                  Read Full Article →
+                </button>
               </div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-3">
-                {blog.title}
-              </h2>
-              <p className="text-gray-600 mb-4">{blog.excerpt}</p>
-              <button className="text-blue-600 font-semibold hover:underline">
-                Read Full Article →
-              </button>
             </article>
           ))}
         </div>

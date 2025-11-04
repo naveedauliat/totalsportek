@@ -104,30 +104,37 @@ export default function LatestNews() {
           {news.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition border-l-4 border-blue-600"
+              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition border-l-4 border-blue-600"
             >
-              <div className="flex items-center gap-2 mb-3">
-                <span className="text-sm font-semibold text-blue-600">
-                  {item.source}
-                </span>
-                <span className="text-sm text-gray-500">
-                  {new Date(item.publishedAt).toLocaleDateString()}
-                </span>
+              <img
+                src={`/featured-post-${((news.indexOf(item) % 3) + 1)}.jpg`}
+                alt={item.title}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="text-sm font-semibold text-blue-600">
+                    {item.source}
+                  </span>
+                  <span className="text-sm text-gray-500">
+                    {new Date(item.publishedAt).toLocaleDateString()}
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 leading-tight">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 mb-4 line-clamp-3 leading-relaxed">
+                  {item.description}
+                </p>
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 font-semibold hover:underline"
+                >
+                  Read Full Article →
+                </a>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                {item.title}
-              </h3>
-              <p className="text-gray-600 mb-4 line-clamp-3">
-                {item.description}
-              </p>
-              <a
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 font-semibold hover:underline"
-              >
-                Read Full Article →
-              </a>
             </div>
           ))}
         </div>

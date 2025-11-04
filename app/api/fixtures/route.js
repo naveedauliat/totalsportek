@@ -3,19 +3,23 @@ import { NextResponse } from 'next/server';
 
 export async function GET() {
   try {
-    // Using AllSportsAPI for comprehensive sports fixtures
-    const API_KEY = process.env.ALLSPORTS_API_KEY || 'abffff213b6eb76fff1012bd481305f26f3761736f7b1d49d677781b6c56da9b'; // AllSportsAPI key
-    const response = await axios.get(`https://apiv2.allsportsapi.com/football/?met=Fixtures&APIkey=${API_KEY}&from=2024-01-01&to=2024-12-31&leagueId=152`);
+    // Using a free football API (you can replace with other sports APIs)
+    const API_KEY = process.env.FOOTBALL_API_KEY || 'f0a4cc827c054747bfabdc139e3b8277'; // Replace with actual API key
+    const response = await axios.get(`https://api.football-data.org/v4/matches`, {
+      headers: {
+        'X-Auth-Token': API_KEY
+      }
+    });
 
-    const fixtures = response.data.result ? response.data.result.slice(0, 10).map(match => ({
-      id: match.event_key,
-      homeTeam: match.event_home_team,
-      awayTeam: match.event_away_team,
-      competition: match.league_name,
-      date: match.event_date + ' ' + match.event_time,
-      status: match.event_status,
-      score: match.event_final_result ? match.event_final_result : null
-    })) : [];
+    const fixtures = response.data.matches.slice(0, 10).map(match => ({
+      id: match.id,
+      homeTeam: match.homeTeam.name,
+      awayTeam: match.awayTeam.name,
+      competition: match.competition.name,
+      date: match.utcDate,
+      status: match.status,
+      score: match.score ? `${match.score.fullTime.home} - ${match.score.fullTime.away}` : null
+    }));
 
     return NextResponse.json(fixtures);
   } catch (error) {

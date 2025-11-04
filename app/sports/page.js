@@ -72,24 +72,34 @@ export default function Sports() {
 
         <div className="mt-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Latest Sports Updates</h2>
-          <div className="space-y-6">
+          <div className="grid md:grid-cols-2 gap-8">
             {sportsNews.map(news => (
               <div
                 key={news.id}
-                className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition border-l-4 border-green-600"
+                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition border-l-4 border-green-600"
               >
-                <div className="flex justify-between items-start mb-3">
-                  <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
-                    {news.sport}
-                  </span>
-                  <span className="text-sm text-gray-500">{news.date}</span>
+                <img
+                  src={`/featured-post-${news.id % 3 + 1}.jpg`}
+                  alt={news.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <div className="flex justify-between items-start mb-3">
+                    <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
+                      {news.sport}
+                    </span>
+                    <span className="text-sm text-gray-500">{news.date}</span>
+                  </div>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-3 leading-tight">
+                    {news.title}
+                  </h2>
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    Discover the latest developments in {news.sport.toLowerCase()} with Totalsportek's comprehensive coverage of sports technology and performance analytics.
+                  </p>
+                  <button className="text-green-600 font-semibold hover:underline">
+                    Read More →
+                  </button>
                 </div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-3">
-                  {news.title}
-                </h2>
-                <button className="text-green-600 font-semibold hover:underline">
-                  Read More →
-                </button>
               </div>
             ))}
           </div>
