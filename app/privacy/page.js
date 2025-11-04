@@ -1,4 +1,4 @@
-
+ s
 
 import Link from 'next/link'
 
@@ -7,7 +7,28 @@ export const metadata = {
   description: 'Read Totalsportek Blogs privacy policy for live sports technology insights and real-time analytics. Learn about our data practices for innovative solutions in live streaming athletics.',
   keywords: 'privacy totalsportek, live sports technology, real-time analytics, live stream athletics, innovative sports solutions, total sport ek, tech in sports, live streaming sports',
   alternates: {
-    canonical: 'https://totalsportek-blogs.vercel.app/privacy',
+    canonical: 'https://totalsportek.stopwatch.lol/privacy',
+  },
+  openGraph: {
+    title: 'Privacy - Totalsportek Blogs',
+    description: 'Read Totalsportek Blogs privacy policy for live sports technology insights and real-time analytics. Learn about our data practices for innovative solutions in live streaming athletics.',
+    url: 'https://totalsportek.stopwatch.lol/privacy',
+    siteName: 'Totalsportek Blogs',
+    images: [
+      {
+        url: 'https://totalsportek.stopwatch.lol/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Totalsportek Blogs - Live Sports Technology',
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Privacy - Totalsportek Blogs',
+    description: 'Read Totalsportek Blogs privacy policy for live sports technology insights and real-time analytics. Learn about our data practices for innovative solutions in live streaming athletics.',
+    images: ['https://totalsportek.stopwatch.lol/og-image.jpg'],
   },
 }
 

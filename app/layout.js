@@ -13,6 +13,27 @@ export const metadata = {
     icon: '/favicon.ico',
     apple: '/apple-touch-icon.png',
   },
+  openGraph: {
+    title: 'Totalsportek Blogs',
+    description: 'Discover innovative sports technology insights, analytics, and solutions at Totalsportek Blogs. Explore cutting-edge tech in athletics, sports performance, and total sport ek innovations.',
+    url: 'https://totalsportek.stopwatch.lol',
+    siteName: 'Totalsportek Blogs',
+    images: [
+      {
+        url: 'https://totalsportek.stopwatch.lol/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Totalsportek Blogs - Live Sports Technology',
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Totalsportek Blogs',
+    description: 'Discover innovative sports technology insights, analytics, and solutions at Totalsportek Blogs. Explore cutting-edge tech in athletics, sports performance, and total sport ek innovations.',
+    images: ['https://totalsportek.stopwatch.lol/og-image.jpg'],
+  },
 }
 
 export default function RootLayout({ children }) {

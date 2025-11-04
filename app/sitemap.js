@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://totalsportek-blogs.vercel.app' // Replace with your actual domain
+  const baseUrl = 'https://totalsportek.stopwatch.lol' // Replace with your actual domain
 
   return [
     {

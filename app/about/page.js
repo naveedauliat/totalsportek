@@ -7,7 +7,28 @@ export const metadata = {
   description: 'Discover Totalsportek Blogs, your live source for sports technology insights and real-time analytics. Learn about our innovative solutions for live streaming athletics and total sport ek innovations.',
   keywords: 'about totalsportek, live sports technology, real-time analytics, live stream athletics, innovative sports solutions, total sport ek, tech in sports, live streaming sports',
   alternates: {
-    canonical: 'https://totalsportek-blogs.vercel.app/about',
+    canonical: 'https://totalsportek.stopwatch.lol/about',
+  },
+  openGraph: {
+    title: 'About - Totalsportek Blogs',
+    description: 'Discover Totalsportek Blogs, your live source for sports technology insights and real-time analytics. Learn about our innovative solutions for live streaming athletics and total sport ek innovations.',
+    url: 'https://totalsportek.stopwatch.lol/about',
+    siteName: 'Totalsportek Blogs',
+    images: [
+      {
+        url: 'https://totalsportek.stopwatch.lol/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Totalsportek Blogs - Live Sports Technology',
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About - Totalsportek Blogs',
+    description: 'Discover Totalsportek Blogs, your live source for sports technology insights and real-time analytics. Learn about our innovative solutions for live streaming athletics and total sport ek innovations.',
+    images: ['https://totalsportek.stopwatch.lol/og-image.jpg'],
   },
 }
 
