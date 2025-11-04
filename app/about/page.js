@@ -2,6 +2,15 @@
 
 import Link from 'next/link'
 
+export const metadata = {
+  title: 'About - Totalsportek Blogs',
+  description: 'Discover Totalsportek Blogs, your live source for sports technology insights and real-time analytics. Learn about our innovative solutions for live streaming athletics and total sport ek innovations.',
+  keywords: 'about totalsportek, live sports technology, real-time analytics, live stream athletics, innovative sports solutions, total sport ek, tech in sports, live streaming sports',
+  alternates: {
+    canonical: 'https://totalsportek-blogs.vercel.app/about',
+  },
+}
+
 export default function About() {
   return (
     <div className="py-12 px-4 bg-white min-h-screen">

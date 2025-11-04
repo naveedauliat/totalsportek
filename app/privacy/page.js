@@ -2,6 +2,15 @@
 
 import Link from 'next/link'
 
+export const metadata = {
+  title: 'Privacy - Totalsportek Blogs',
+  description: 'Read Totalsportek Blogs privacy policy for live sports technology insights and real-time analytics. Learn about our data practices for innovative solutions in live streaming athletics.',
+  keywords: 'privacy totalsportek, live sports technology, real-time analytics, live stream athletics, innovative sports solutions, total sport ek, tech in sports, live streaming sports',
+  alternates: {
+    canonical: 'https://totalsportek-blogs.vercel.app/privacy',
+  },
+}
+
 export default function Privacy() {
   return (
     <div className="py-12 px-4 bg-white min-h-screen">

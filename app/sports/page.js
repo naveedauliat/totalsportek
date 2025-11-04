@@ -2,9 +2,11 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'Sports News - Totalsportek Blogs',
-  description: 'Stay updated with the latest sports news, highlights, and technology insights at Totalsportek. Explore innovative sports solutions and athletic performance.',
-  keywords: 'sports news, totalsportek, sports technology, athletic performance, sports highlights, innovative sports solutions, total sport ek, sports analytics',
-  canonical: 'https://totalsportek.com/sports'
+  description: 'Experience live sports news and real-time highlights at Totalsportek Blogs. Stay updated with live streaming athletics, innovative sports solutions, and cutting-edge tech in sports performance.',
+  keywords: 'live sports news, totalsportek, live sports technology, real-time athletic performance, live sports highlights, innovative sports solutions, total sport ek, live streaming sports analytics',
+  alternates: {
+    canonical: 'https://totalsportek-blogs.vercel.app/sports',
+  },
 }
 
 export default function Sports() {

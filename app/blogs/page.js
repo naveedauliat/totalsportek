@@ -2,8 +2,8 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'Blogs - Totalsportek Blogs',
-  description: 'Explore comprehensive blogs on sports technology, innovative solutions, and analytics at Totalsportek. Dive into tech in athletics and total sport ek insights.',
-  keywords: 'totalsportek blogs, sports technology blogs, innovative sports solutions, total sport ek blogs, sports analytics blogs, tech in athletics blogs, athletic technology blogs',
+  description: 'Dive into live sports technology blogs and real-time analytics insights at Totalsportek. Explore innovative solutions for live streaming athletics, total sport ek innovations, and cutting-edge tech in sports performance.',
+  keywords: 'totalsportek blogs, live sports technology, real-time analytics blogs, live stream athletics, innovative sports solutions, total sport ek blogs, tech in athletics, live streaming sports blogs',
   alternates: {
     canonical: 'https://totalsportek-blogs.vercel.app/blogs',
   },

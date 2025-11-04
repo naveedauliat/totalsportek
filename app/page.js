@@ -1,6 +1,13 @@
 import Link from 'next/link'
 
-
+export const metadata = {
+  title: 'Home - Totalsportek Blogs',
+  description: 'Experience live sports technology insights and real-time analytics at Totalsportek Blogs. Discover innovative solutions for live streaming athletics, total sport ek innovations, and cutting-edge tech in sports performance.',
+  keywords: 'totalsportek, live sports technology, real-time analytics, live stream athletics, innovative sports solutions, total sport ek, tech in sports, live streaming sports',
+  alternates: {
+    canonical: 'https://totalsportek-blogs.vercel.app/',
+  },
+}
 
 export default function Home() {
   const featuredPosts = [
