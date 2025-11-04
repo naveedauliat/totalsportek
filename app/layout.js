@@ -40,6 +40,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BE8E0SMJGS"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-BE8E0SMJGS');
+            `,
+          }}
+        />
         <script src="https://analytics.ahrefs.com/analytics.js" data-key="c+AOAwm4irUYx0afNWNcBw" async></script>
       </head>
       <body className={inter.className}>
